@@ -1,0 +1,706 @@
+{
+    "_id": "67f9540009889f1437009344",
+    "no": "RRIN-2025-0002",
+    "status": "Completed",
+    "unit": "FT",
+    "yard": "65b366808f07e83c4e7a4b23",
+    "appvwhen": NumberInt(1735893615),
+    "appvwho": "Eldhos Kunjukunju",
+    "postingdate": NumberInt(1735893615),
+    "createdate": NumberInt(1735893615),
+    "type": "11",
+    "insp_type": "Return Inspection",
+    "id_transfer": "6777a26f8a359a4f7c364c25",
+    "idtrans": null,
+    "screening_number": NumberInt(1),
+    "items": [],
+    "carrier": null,
+    "arrivaldate": null,
+    "operatorName": null,
+    "operatorSign": null,
+    "action": null,
+    "notes": {
+        "initial": {
+            "msg": "2 X Casing,13-3/8\",68LB/FT,L-80,JFELION,Drift:API,R3(40-44FT),STD-01,Coated.\r\nADNOC MR # 10423348.\r\nOLDMR-2024-2168",
+            "by": "MITME"
+        }
+    },
+    "stages": [],
+    "batchaction": null,
+    "id_si": null,
+    "transfer_condition": null,
+    "works": [],
+    "tpi": "5e9ef269b1a73d755847ec7e",
+    "rack": null,
+    "template": null,
+    "useSow": null,
+    "drift_inspections": [],
+    "cancelReason": null,
+    "cancelDate": null,
+    "reserved_stock": [
+        {
+            "locked": "5e49e7e48ac96a718736e3f2",
+            "allocation": "Unallocated",
+            "tag": null,
+            "qty": NumberInt(2)
+        }
+    ],
+    "createid": "616fe3a5cdcaf435b626a33a",
+    "createwho": "Eldhos Kunjukunju",
+    "updateid": null,
+    "updatewho": "System Tubestream",
+    "customer": {
+        "customer": "5e49e7e48ac96a718736e3f2",
+        "customer_ref": "ADNOC MR 10345183 / 10345893 / 10345620",
+        "name": "MITME"
+    },
+    "revision_no": NumberInt(0),
+    "revision_date": NumberInt(1744393216),
+    "imei": null,
+    "items_raw": [
+        {
+            "id_item": "62972983244a9372244224ff",
+            "item_code": "ITM001278",
+            "item_desc": "Casing 13 3/8\", 68 PPF, L80, JFELION, R3, Coated",
+            "batch": "PO-2024-00457-A-RR",
+            "original_batch": "PO-2024-00457-A-RR",
+            "condition": "good",
+            "owned": "5e49e7e48ac96a718736e3f2",
+            "locked": "5e49e7e48ac96a718736e3f2",
+            "allocation": "Unallocated",
+            "tag": null,
+            "qty": NumberInt(2),
+            "id_quarantine": null,
+            "customer_item_no": "150013006908",
+            "owned_name": "OFFSHORE",
+            "locked_name": "OFFSHORE",
+            "item_type": "0",
+            "item_type_name": "Casing",
+            "item_pipe_family": "OCTG",
+            "inspected_qty": NumberInt(2),
+            "balance": NumberInt(0),
+            "inprogress_qty": NumberInt(0)
+        }
+    ],
+    "released_stock": [
+        {
+            "id_item": "62972983244a9372244224ff",
+            "batch": "PO-2024-00457-A-RR",
+            "original_condition": "good",
+            "condition": "good",
+            "owned": "5e49e7e48ac96a718736e3f2",
+            "locked": "5e49e7e48ac96a718736e3f2",
+            "allocation": "Unallocated",
+            "tag": null,
+            "qty": NumberInt(2),
+            "id_screening": "67f9540009889f1437009345"
+        }
+    ],
+    "iwo": null,
+    "sow": [
+        {
+            "template": "5f17d801b0ae06193e5e3bd6",
+            "works": [
+                {
+                    "_id": "5d8a38e7e0bb337413523a8c",
+                    "subscope": "38b3aae109c86bc7435403d21a924649ca1e79b2",
+                    "subscope_name": "Coating Chemical",
+                    "fields": [
+                        {
+                            "name": "External GT",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "External GT",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "4141f03975c7d84e3b2e5ad7848298fd406f0672"
+                        },
+                        {
+                            "name": "Internal GT",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Internal GT",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "eae84a7e123157949f29d04ee03498ae07c71c09"
+                        }
+                    ]
+                },
+                {
+                    "_id": "5d8a38e7e0bb337413523a8e",
+                    "subscope": "f60d875bcd98a60f067a50cdb6d790efee55b1c6",
+                    "subscope_name": "Storage Compound",
+                    "fields": [
+                        {
+                            "name": "Jet Lube HP",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Jet Lube HP",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "5018e9b7ed6681890c0620857695718f886d3bcf"
+                        },
+                        {
+                            "name": "Kendex",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Kendex",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "c000df1936448a4d4967428fef10a38e40501503"
+                        },
+                        {
+                            "name": "PTT EP2",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "PTT EP2",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "091e544e569290efb6a39d3d22aa2442ed72db25"
+                        },
+                        {
+                            "name": "Bestolife Modified",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Bestolife Modified",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "1f69065962da1086eb98535443623c711018390f"
+                        }
+                    ]
+                },
+                {
+                    "_id": "5d8a38e7e0bb337413523a86",
+                    "subscope": "90f9b69fcbf8f390ac4d5e5928546de9006014a9",
+                    "subscope_name": "Inspection",
+                    "fields": [
+                        {
+                            "name": "Visual Thread",
+                            "type": "checkbox",
+                            "selected": true,
+                            "value": "Visual Thread",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "783cc3bd79f79eaa5a542ea469109b9691738c84"
+                        },
+                        {
+                            "name": "Visual Body",
+                            "type": "checkbox",
+                            "selected": true,
+                            "value": "Visual Body",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "3f9c49117ef0c716cfd9bf6445de694be1a07cdb"
+                        },
+                        {
+                            "name": "Full Length Drift",
+                            "type": "checkbox",
+                            "selected": true,
+                            "value": "Full Length Drift",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": true,
+                            "_id": "07e264957c684e26550f4d2b20c75df63ba2dbd3"
+                        },
+                        {
+                            "name": "End Drift",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "End Drift",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": true,
+                            "_id": "44c296bbb40cb1a9cc6ad251ce49d46bdb482e1c"
+                        },
+                        {
+                            "name": "Magnetic Particle",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Magnetic Particle",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "664de03dde774377a8f16c1091b89598bce3f770"
+                        },
+                        {
+                            "name": "Electro Magnetic",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Electro Magnetic",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "af87255ed18b9d57c25f87138054eefaf5588af2"
+                        },
+                        {
+                            "name": "Thread Gauging",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Thread Gauging",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "cb3949e9177b54b4c04494905dde8fcd0c84f0ee"
+                        },
+                        {
+                            "name": "Ring and Plug Gauging",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Ring and Plug Gauging",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "ac6ccb551ad842692102ac660ac22cedabb730cf"
+                        },
+                        {
+                            "name": "Hardness Check",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Hardness Check",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "cc15449196d4a058caf8c8e8d385e2dd9f565323"
+                        },
+                        {
+                            "name": "Wall Thickness Check",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Wall Thickness Check",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "c1c18af5767df2dd8ee1ff8e3995ab5d0971f76a"
+                        },
+                        {
+                            "name": "Ultrasonic",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Ultrasonic",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "d4fcef2b27e913136d400dd6a425f3f97cbec064"
+                        },
+                        {
+                            "name": "Demagnetize",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Demagnetize",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "96e7f8d226d289576f00475f18a5752d9999cf45"
+                        },
+                        {
+                            "name": "Penetrant Check",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Penetrant Check",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "4d25ac0d19a1ae8b998a96160a21cbb485853dab"
+                        },
+                        {
+                            "name": "Straigthening",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Straigthening",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "f5d05b8960d1e4a26b71fda54d90ff5e7efaf07c"
+                        },
+                        {
+                            "name": "Straigtheness Check",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Straigtheness Check",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "e9552d8bb4ee143eef8b1e4fe0b87361647e0994"
+                        },
+                        {
+                            "name": "Hook End Check",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Hook End Check",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "463702bad51e0f4bec43ae8e12d6e956366da2ca"
+                        },
+                        {
+                            "name": "Visual Sling",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Visual Sling",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "705c9806cbf1a9a4fb77b68899b85f51721ec0c7"
+                        },
+                        {
+                            "name": "Visual Hook",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Visual Hook",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "88ebcf982381d0524f1be26a509d27c7f2917558"
+                        },
+                        {
+                            "name": "Visual Shackle",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Visual Shackle",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "73496f9bcba0587aa26e75b191c6ccc06b4ec37c"
+                        },
+                        {
+                            "name": "Tally Report",
+                            "type": "checkbox",
+                            "selected": true,
+                            "value": "Tally Report",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "275a1852ed07b2cb754f01f9f92f481e84d1cc05"
+                        },
+                        {
+                            "name": "Coating",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Coating",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "inspection-coating"
+                        }
+                    ]
+                },
+                {
+                    "_id": "5d8a38e7e0bb337413523a90",
+                    "subscope": "dc724af18fbdd4e59189f5fe768a5f8311527050",
+                    "subscope_name": "Testing",
+                    "fields": [
+                        {
+                            "name": "Webbing Slings",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Webbing Slings",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "2272cd82d1d0f2a17e152a658857cc1aa9a71fef"
+                        },
+                        {
+                            "name": "Wire Slings",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Wire Slings",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "8d05f2d9c8a15078d18975a0a42bf1b64f71e59f"
+                        },
+                        {
+                            "name": "Spreader Bar",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Spreader Bar",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "62dc518a434da3be71f06be238431217930d2050"
+                        },
+                        {
+                            "name": "Steel Baskets",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Steel Baskets",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "0d23f6167db48e3e90212cab6aee3cb8f9113b0a"
+                        },
+                        {
+                            "name": "Tensile",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Tensile",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "8d1790fc99f311d2ec06261d5fe263fc7033b3de"
+                        },
+                        {
+                            "name": "Chemical",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Chemical",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "b9bbcd016f32ded9c9ff2adeb1c7023f79038d42"
+                        },
+                        {
+                            "name": "Charpy",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Charpy",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "e059dc5ffd2892dd4b4e2696377c6cd33b57f8bf"
+                        },
+                        {
+                            "name": "Hardness",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Hardness",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "b0b7ca57d08825fd9cc2b49608bc88380f5caeb5"
+                        },
+                        {
+                            "name": "Silver Nitrate",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Silver Nitrate",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "24f76253897220638f511619f70dc3c613735d74"
+                        }
+                    ]
+                },
+                {
+                    "_id": "5d8a38e7e0bb337413523a92",
+                    "subscope": "246279c5c0ab0418e57c98e62f538d3b706fdd71",
+                    "subscope_name": "TPI Survellience",
+                    "fields": [
+                        {
+                            "name": "Loading",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Loading",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "60a6a222cebd0fc9810c62a75751bd98070f9d54"
+                        },
+                        {
+                            "name": "Unloading",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Unloading",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "fd5db07d287a022a979369276c0016107356b992"
+                        },
+                        {
+                            "name": "Stuffing Container",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Stuffing Container",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "67c603541212db3f720558f8c2b0efdaedd3f89a"
+                        },
+                        {
+                            "name": "Unstuffing Container",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Unstuffing Container",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "ce69c22c0b7a966af3f4c86e8f7d43d22d12f806"
+                        }
+                    ]
+                },
+                {
+                    "_id": "5d8a38e7e0bb337413523a8a",
+                    "subscope": "e8831801e2fb87001799f58c253616d120c720c3",
+                    "subscope_name": "Stenciling & Marking",
+                    "fields": [
+                        {
+                            "name": "API Color Band",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "API Color Band",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "4c8cb76e12c354d6caa373d0638c521f5810a8a0"
+                        },
+                        {
+                            "name": "TRFR & TRFS Color Band",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "TRFR & TRFS Color Band",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "e78d6e347f61001a001c417251be8bdb71b74deb"
+                        },
+                        {
+                            "name": "Customer Color Band",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Customer Color Band",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "99f5358951511f3ef2146dc1f1a48a9002583cf0"
+                        },
+                        {
+                            "name": "Tally Marking Full Length",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Tally Marking Full Length",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "ad6af7af6ef9d6647b7db5b0cb5f2312c5b23147"
+                        },
+                        {
+                            "name": "Tally Marking Running Length",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Tally Marking Running Length",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "251319e13f938474b0a749cf90fc765df5a9a277"
+                        },
+                        {
+                            "name": "TPI Stencil Marking",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "TPI Stencil Marking",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "4aac9a07dec49fdf0d8d8d7658a1df946550eb58"
+                        },
+                        {
+                            "name": "MITME Lot no.",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "MITME Lot no.",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "c6abf224d1fdaab83b30e10bb66f172d4970338a"
+                        }
+                    ]
+                },
+                {
+                    "_id": "5d8a38e7e0bb337413523a88",
+                    "subscope": "c2040f46102e126d791b2637599a24d57a0f88a9",
+                    "subscope_name": "Refurbish",
+                    "fields": [
+                        {
+                            "name": "Internal Coating End",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Internal Coating End",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "89195a20b18aa898c80a39de9edb11997c221aa8"
+                        },
+                        {
+                            "name": "Internal Coating Full Length",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Internal Coating Full Length",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "1ef78ea63af10069edb3fc189bcd71823bd6676e"
+                        },
+                        {
+                            "name": "Internal Cleaning/Blowing",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "Internal Cleaning/Blowing",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "bdf19f03d579387fd61b3d87fbc7138f9efb9d90"
+                        },
+                        {
+                            "name": "External Cleaning",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "External Cleaning",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "b4b8f4945951b37a551e55ad8d3d0e595d42a31b"
+                        },
+                        {
+                            "name": "External Coating",
+                            "type": "checkbox",
+                            "selected": false,
+                            "value": "External Coating",
+                            "editableDescription": true,
+                            "requiredDescription": false,
+                            "drift_inspection": false,
+                            "_id": "aaea675eb3f251c9c16887f47a583e1d8539597c"
+                        }
+                    ]
+                }
+            ],
+            "template_name": "ADNOC Requirements",
+            "items": [
+                {
+                    "id_item": "62972983244a9372244224ff"
+                }
+            ]
+        }
+    ],
+    "journaled": [],
+    "invoiced": null,
+    "invoicedwhen": null,
+    "invoicedwho": null,
+    "progress": 100.0,
+    "yardName": "MHPC",
+    "linkTo": "RRIN-2025-0002",
+    "tpiName": "NOV Middle East Oil and Gas Wells Equipments and Devices L.L.C",
+    "total_lisi": NumberInt(2),
+    "lisi": [
+        {
+            "id": "68c7cf21c5ff2efac5040a19",
+            "no": "SI-2025-0169",
+            "url": "/index.php/external_document/instruction/det/68c7cf21c5ff2efac5040a19",
+            "type": "text"
+        },
+        {
+            "id": "68c7cf21c5ff2efac5040a10",
+            "no": "SI-2025-0170",
+            "url": "/index.php/external_document/instruction/det/68c7cf21c5ff2efac5040a10",
+            "type": "text"
+        }
+    ],
+    "qty": NumberInt(0)
+}
