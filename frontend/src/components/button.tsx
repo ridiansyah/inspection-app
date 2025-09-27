@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({
 
   const variantClasses = {
     primary: "bg-teal-500 text-white hover:bg-teal-600 focus:ring-teal-500",
-    secondary: "bg-gray-500 text-white hover:bg-gray-600 focus:ring-gray-500",
+    secondary: "bg-gray-100 text-black hover:bg-gray-300 focus:ring-gray-200",
     outline:
       "border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-teal-500",
   };
@@ -30,14 +30,16 @@ const Button: React.FC<ButtonProps> = ({
   const sizeClasses = {
     sm: "px-3 py-1.5 text-sm",
     md: "px-4 py-2 text-sm",
-    lg: "px-6 py-3 text-base",
+    lg: "px-8 py-2 text-base",
   };
 
   return (
     <button
       className={`${baseClasses} ${variantClasses[variant]} ${
         sizeClasses[size]
-      } ${className} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
+      } ${className} ${
+        disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+      }`}
       onClick={onClick}
       disabled={disabled}
     >

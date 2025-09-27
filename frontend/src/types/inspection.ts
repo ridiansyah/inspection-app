@@ -193,7 +193,7 @@ export interface Order {
 export interface InspectionRecord {
   _id: number; //generated on creation
   no: string; //formatted as "RRIN-YYYY-MMDD-N"
-  status: "New" | "In Progress" | "Ready to Review" | "Completed";
+  status: "New" | "In Progress" | "Ready to Review" | "Completed" | "Draft";
   ecd_date: number; //timestamp
   create_date: number; //timestamp
   insp_type: {
@@ -204,13 +204,13 @@ export interface InspectionRecord {
     initial: {
       msg: string; //note to yard
       by: string; //user name
-      by_id: string; // user id
+      by_id: number; // user id
     };
   };
   creator_id: number;
-  create_name: string;
+  creator_name: string;
   customer: {
-    customer: number; //customer ID
+    _id: number; //customer ID
     customer_ref: string; //related to
     name: string; //customer name
     charge: boolean; // charge to customer

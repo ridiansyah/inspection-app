@@ -7,13 +7,13 @@
     "create_date": NumberInt(1735893615),
     "insp_type":{
         "_id": 1,
-        "name": "Return Inspection"
+        "name": "New Arrival"
     },
     "notes": {
         "initial": {
             "msg": "2 X Casing,13-3/8\",68LB/FT,L-80,JFELION,Drift:API,R3(40-44FT),STD-01,Coated.\r\nADNOC MR # 10423348.\r\nOLDMR-2024-2168",
             "by": "MITME",
-            "by_id": "5e49e7e48ac96a718736e3f2"
+            "by_id": 2
         }
     },
     "creator_id": 1,
@@ -144,12 +144,12 @@
     "status": "New",
     "ecd_date": NumberInt(1736066415),
     "create_date": NumberInt(1736066415),
-    "insp_type": { "_id": 2, "name": "New Arrival" },
+    "insp_type": { "_id": 2, "name": "Maintenance" },
     "notes": {
       "initial": {
         "msg": "Incoming 9-5/8\" casing batch; visual only on arrival.",
         "by": "ADNOC",
-        "by_id": "5e49e7e48ac96a718736e3f3"
+        "by_id": 3
       }
     },
     "creator_id": 2,
@@ -202,12 +202,12 @@
     "status": "New",
     "ecd_date": NumberInt(1736152815),
     "create_date": NumberInt(1736152815),
-    "insp_type": { "_id": 5, "name": "On Demand Maintenance" },
+    "insp_type": { "_id": 1, "name": "New Arrival" },
     "notes": {
       "initial": {
         "msg": "Customer reports coating blistering on random joints.",
         "by": "MITME",
-        "by_id": "5e49e7e48ac96a718736e3f4"
+        "by_id": 2
       }
     },
     "creator_id": 3,
@@ -260,9 +260,9 @@
     "status": "In Progress",
     "ecd_date": NumberInt(1736239215),
     "create_date": NumberInt(1736152815),
-    "insp_type": { "_id": 4, "name": "Routine Maintenance" },
+    "insp_type": { "_id": 2, "name": "Maintenance" },
     "notes": {
-      "initial": { "msg": "Routine quarterly inspection.", "by": "QA", "by_id": "5e49e7e48ac96a718736e3f5" }
+      "initial": { "msg": "Routine quarterly inspection.", "by": "QA", "by_id": 5 }
     },
     "creator_id": 4,
     "creator_name": "Sari Ningsih",
@@ -314,9 +314,9 @@
     "status": "In Progress",
     "ecd_date": NumberInt(1736325615),
     "create_date": NumberInt(1736152815),
-    "insp_type": { "_id": 3, "name": "Routine Maintenance" },
+    "insp_type": { "_id": 3, "name": "On Spot" },
     "notes": {
-      "initial": { "msg": "Thread damage sampling underway.", "by": "QC", "by_id": "5e49e7e48ac96a718736e3f6" }
+      "initial": { "msg": "Thread damage sampling underway.", "by": "QC", "by_id": 5 }
     },
     "creator_id": 5,
     "creator_name": "Eldhos Kunjukunju",
@@ -368,12 +368,12 @@
     "status": "For Review",
     "ecd_date": NumberInt(1736412015),
     "create_date": NumberInt(1736240015),
-    "insp_type": { "_id": 1, "name": "Return Inspection" },
+    "insp_type": { "_id": 1, "name": "New Arrival" },
     "notes": {
       "initial": {
         "msg": "Returned after rental; verify wear & straightness.",
         "by": "Ops",
-        "by_id": "5e49e7e48ac96a718736e3f7"
+        "by_id": 6
       }
     },
     "creator_id": 6,
@@ -426,12 +426,12 @@
     "status": "For Review",
     "ecd_date": NumberInt(1736498415),
     "create_date": NumberInt(1736325615),
-    "insp_type": { "_id": 3, "name": "Routine Maintenance" },
+    "insp_type": { "_id": 2, "name": "Maintenance" },
     "notes": {
       "initial": {
         "msg": "Report drafted, waiting QC sign-off.",
         "by": "Inspector A",
-        "by_id": "5e49e7e48ac96a718736e3f8"
+        "by_id": 10
       }
     },
     "creator_id": 7,
@@ -484,12 +484,12 @@
     "status": "Ready to Review",
     "ecd_date": NumberInt(1736584815),
     "create_date": NumberInt(1736400015),
-    "insp_type": { "_id": 2, "name": "New Arrival" },
+    "insp_type": { "_id": 3, "name": "On Spot" },
     "notes": {
       "initial": {
         "msg": "All inspections complete. Attach photos in report.",
         "by": "Inspector B",
-        "by_id": "5e49e7e48ac96a718736e3f9"
+        "by_id": 11
       }
     },
     "creator_id": 8,
@@ -542,9 +542,9 @@
     "status": "Ready to Review",
     "ecd_date": NumberInt(1736671215),
     "create_date": NumberInt(1736486415),
-    "insp_type": { "_id": 5, "name": "On Demand Maintenance" },
+    "insp_type": { "_id": 3, "name": "On Spot" },
     "notes": {
-      "initial": { "msg": "Emergency check completed; awaiting approval.", "by": "Shift Lead", "by_id": "5e49e7e48ac96a718736e3fa" }
+      "initial": { "msg": "Emergency check completed; awaiting approval.", "by": "Shift Lead", "by_id": 22 }
     },
     "creator_id": 9,
     "creator_name": "Fajar Setiawan",

@@ -15,14 +15,14 @@ const initialState: InspectionState = {
 };
 
 export const fetchInspections = createAsyncThunk<
-  InspectionRecord[], // return type
-  void, // arg
+  InspectionRecord[],
+  void,
   { state: RootState }
 >(
   "inspection/fetchInspections",
   async (_: void, { signal, rejectWithValue }) => {
     try {
-      const data = await inspectionApi.fetchInspections(signal); // ⬅️ kirim signal
+      const data = await inspectionApi.fetchInspections(signal);
       return data;
     } catch (err: unknown) {
       if (
@@ -49,7 +49,6 @@ export const fetchInspections = createAsyncThunk<
     }
   },
   {
-    // ⬅️ dedupe: kalau sudah pernah load atau sedang loading, jangan fetch lagi
     condition: (_: void, { getState }) => {
       const { inspection } = getState();
       if (inspection.loading || inspection.loaded) return false;
@@ -70,6 +69,9 @@ const inspectionSlice = createSlice({
     },
     clearError: (state) => {
       state.error = null;
+    },
+    addRecord: (state, action: PayloadAction<InspectionRecord>) => {
+      state.records.push(action.payload);
     },
   },
   extraReducers: (builder) => {
@@ -93,6 +95,6 @@ const inspectionSlice = createSlice({
   },
 });
 
-export const { setStatusFilter, setSearchFilter, clearError } =
+export const { setStatusFilter, setSearchFilter, clearError, addRecord } =
   inspectionSlice.actions;
 export default inspectionSlice.reducer;

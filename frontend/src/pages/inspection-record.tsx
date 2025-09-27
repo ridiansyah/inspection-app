@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState, AppDispatch } from "../store/store";
 import {
@@ -14,8 +14,10 @@ import InspectionTable from "../components/features/inspection-table";
 import { formatDate } from "../utils/utils";
 import DefaultLayout from "../layouts/default-layout";
 import ExportButton from "../components/export-button";
+import { useNavigate } from "react-router-dom";
 
 const InspectionRecord: React.FC = () => {
+  const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>();
   const { records, loading, error, filters } = useSelector(
     (state: RootState) => state.inspection
@@ -25,7 +27,11 @@ const InspectionRecord: React.FC = () => {
     dispatch(fetchInspections());
   }, [dispatch]);
 
-  const filteredRecords = records.filter((record) => {
+  const sortedData = useMemo(() => {
+    return [...records].sort((a, b) => b.create_date - a.create_date);
+  }, [records]);
+
+  const filteredRecords = sortedData.filter((record) => {
     const matchesStatus =
       filters.status === "Open"
         ? record.status === "New" || record.status === "In Progress"
@@ -61,7 +67,7 @@ const InspectionRecord: React.FC = () => {
     return matchesStatus && matchesSearch;
   });
 
-  const forReviewCount = records.filter(
+  const forReviewCount = sortedData.filter(
     (record) => record.status === "Ready to Review"
   ).length;
 
@@ -92,8 +98,11 @@ const InspectionRecord: React.FC = () => {
             />
           </div>
           <div className="flex items-center space-x-2">
-            <ExportButton data={records} filename="inspection-records" />
-            <Button className="cursor-pointer">
+            <ExportButton
+              data={filteredRecords}
+              filename="inspection-records"
+            />
+            <Button onClick={() => navigate("/inspection-record/create")}>
               <Icon name="plus" size={16} className="mr-2" />
               Create Request
             </Button>

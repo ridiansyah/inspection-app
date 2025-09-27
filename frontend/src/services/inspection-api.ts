@@ -13,7 +13,7 @@ export const inspectionApi = {
     signal?: AbortSignal
   ): Promise<InspectionRecord[]> => {
     try {
-      const response = await api.get("/inspections", { signal }); // ⬅️ pass signal
+      const response = await api.get("/inspections", { signal });
       return response.data;
     } catch (error: unknown) {
       if (axios.isCancel?.(error)) throw error;
