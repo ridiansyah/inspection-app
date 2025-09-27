@@ -1,10 +1,20 @@
-export default function App() {
+import { useAppDispatch } from "./store/hooks";
+import { useEffect } from "react";
+import { fetchInspections } from "./store/slices/inspection";
+import { Routes, Route, Navigate } from "react-router-dom";
+import InspectionRecord from "./pages/inspection-record";
+
+const App: React.FC = () => {
+  const dispatch = useAppDispatch();
+  useEffect(() => {
+    dispatch(fetchInspections());
+  }, [dispatch]);
   return (
-    <div className="min-h-screen grid place-items-center">
-      <div className="p-6 rounded-2xl shadow">
-        <h1 className="text-2xl font-bold">Vite + React + TS + Tailwind v4</h1>
-        <p className="mt-2 opacity-70">Ready to ship.</p>
-      </div>
-    </div>
+    <Routes>
+      <Route path="/inspection-record" element={<InspectionRecord />} />
+      <Route path="*" element={<Navigate to="/inspection-record" replace />} />
+    </Routes>
   );
-}
+};
+
+export default App;
