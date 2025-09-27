@@ -9,12 +9,21 @@ const api = axios.create({
 });
 
 export const inspectionApi = {
-  fetchInspections: async (): Promise<InspectionRecord[]> => {
+  fetchInspections: async (
+    signal?: AbortSignal
+  ): Promise<InspectionRecord[]> => {
     try {
-      const response = await api.get("/inspections");
+      const response = await api.get("/inspections", { signal }); // ⬅️ pass signal
       return response.data;
-    } catch (error) {
-      throw new Error(`Failed to fetch inspections: ${error}`);
+    } catch (error: unknown) {
+      if (axios.isCancel?.(error)) throw error;
+      let message = "Unknown error";
+      if (typeof error === "object" && error !== null && "message" in error) {
+        message = (error as { message?: string }).message ?? String(error);
+      } else {
+        message = String(error);
+      }
+      throw new Error(`Failed to fetch inspections: ${message}`);
     }
   },
 };

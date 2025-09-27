@@ -228,6 +228,7 @@ export interface InspectionRecord {
 export interface InspectionState {
   records: InspectionRecord[];
   loading: boolean;
+  loaded: boolean;
   error: string | null;
   filters: {
     status: string;

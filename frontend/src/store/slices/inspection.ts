@@ -1,10 +1,12 @@
 import { inspectionApi } from "../../services/inspection-api";
-import { InspectionState } from "../../types/inspection";
+import { InspectionRecord, InspectionState } from "../../types/inspection";
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
+import { RootState } from "../store";
 
 const initialState: InspectionState = {
   records: [],
   loading: false,
+  loaded: false,
   error: null,
   filters: {
     status: "Open",
@@ -12,10 +14,47 @@ const initialState: InspectionState = {
   },
 };
 
-export const fetchInspections = createAsyncThunk(
+export const fetchInspections = createAsyncThunk<
+  InspectionRecord[], // return type
+  void, // arg
+  { state: RootState }
+>(
   "inspection/fetchInspections",
-  async () => {
-    return await inspectionApi.fetchInspections();
+  async (_: void, { signal, rejectWithValue }) => {
+    try {
+      const data = await inspectionApi.fetchInspections(signal); // ⬅️ kirim signal
+      return data;
+    } catch (err: unknown) {
+      if (
+        typeof err === "object" &&
+        err !== null &&
+        ("name" in err || "code" in err)
+      ) {
+        const errorObj = err as {
+          name?: string;
+          code?: string;
+          message?: string;
+        };
+        if (
+          errorObj.name === "CanceledError" ||
+          errorObj.code === "ERR_CANCELED"
+        ) {
+          return rejectWithValue("Request canceled");
+        }
+        return rejectWithValue(
+          errorObj.message ?? "Failed to fetch inspections"
+        );
+      }
+      return rejectWithValue("Failed to fetch inspections");
+    }
+  },
+  {
+    // ⬅️ dedupe: kalau sudah pernah load atau sedang loading, jangan fetch lagi
+    condition: (_: void, { getState }) => {
+      const { inspection } = getState();
+      if (inspection.loading || inspection.loaded) return false;
+      return true;
+    },
   }
 );
 
@@ -41,11 +80,15 @@ const inspectionSlice = createSlice({
       })
       .addCase(fetchInspections.fulfilled, (state, action) => {
         state.loading = false;
+        state.loaded = true;
         state.records = action.payload;
       })
       .addCase(fetchInspections.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.error.message || "Failed to fetch inspections";
+        state.error =
+          (action.payload as string) ??
+          action.error.message ??
+          "Failed to fetch inspections";
       });
   },
 });
