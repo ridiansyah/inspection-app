@@ -11,8 +11,8 @@ class InspectionController extends BaseController
         try {
             // Define the JSON file path (use storage_path helper if available, otherwise fallback to __DIR__)
             $path = function_exists('storage_path')
-                ? storage_path('app/fe-datatest.json')
-                : __DIR__ . '/../../../../storage/app/fe-datatest.json';
+                ? storage_path('app/my-datatest.json')
+                : __DIR__ . '/../../../../storage/app/my-datatest.json';
 
             // If the file does not exist, return a 404 error response
             if (!file_exists($path)) {
