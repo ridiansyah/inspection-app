@@ -111,3 +111,5 @@
 – **Routing:** Utilises `react-router-dom` to handle navigation between pages.
 
 – **Atomic design:** Components are organised into the `src/components` directory. This promotes reusability and separation of concerns.
+
+– **Responsive Design:** The UI is fully responsive using Tailwind CSS breakpoints. Layouts and components automatically adjust for different screen sizes (desktop, tablet, and mobile). Tables, forms, and navigation elements have been optimized to remain accessible and user-friendly across devices.
