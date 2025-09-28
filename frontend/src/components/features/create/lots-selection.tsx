@@ -17,7 +17,7 @@ import {
   getAvailableQty,
 } from "../../../utils/lots-data";
 import Input from "../../inputs/input";
-import { CopyPlus, Trash2 } from "lucide-react";
+import { SquarePlus, Trash2 } from "lucide-react";
 
 const LotsSection: React.FC<{
   idx: number;
@@ -300,7 +300,7 @@ const LotsSection: React.FC<{
                     })
                   }
                 >
-                  <CopyPlus size={24} />
+                  <SquarePlus size={24} />
                 </Button>
                 <Button
                   variant="secondary"
