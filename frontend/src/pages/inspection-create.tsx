@@ -13,9 +13,14 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import schema from "../form/schema";
 import { Fragment, useEffect, useMemo } from "react";
 import Label from "../components/label";
-import { calculateThirdParty, classNames, toUnixSeconds } from "../utils/utils";
+import {
+  calculateThirdParty,
+  classNames,
+  generateDummyCTC,
+  toUnixSeconds,
+} from "../utils/utils";
 import Chip from "../components/chip";
-import LotsSection from "../components/features/lots-selection";
+import LotsSection from "../components/features/create/lots-selection";
 import Badge from "../components/badge";
 import Button from "../components/button";
 import { useNavigate } from "react-router-dom";
@@ -257,9 +262,10 @@ const InspectionCreate: React.FC = () => {
             progress: 0,
           })),
         })),
+        ctc: data.customer?.charge ? generateDummyCTC() : [],
       };
       dispatch(addRecord(payload));
-      navigate(`/detail/${payload._id}`);
+      navigate(`/inspection-record/${payload._id}`);
     } catch (err) {
       console.error("Failed to create inspection", err);
     }
@@ -453,7 +459,7 @@ const InspectionCreate: React.FC = () => {
                   <Fragment key={field.id}>
                     <div
                       className={classNames(
-                        "grid grid-cols-12 gap-2 items-center px-4 py-2 bg-gray-50 text-xs text-gray-500 ",
+                        "grid grid-cols-12 gap-2 items-center px-4 py-2 bg-gray-100 text-xs text-gray-500 ",
                         idx === 0
                           ? "rounded-t-xl"
                           : "border-t border-t-gray-200"

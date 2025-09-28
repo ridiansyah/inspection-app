@@ -1,22 +1,22 @@
 import React, { Fragment, useMemo } from "react";
 import { useSelector } from "react-redux";
-import { RootState } from "../../store/store";
+import { RootState } from "../../../store/store";
 import {
   Controller,
   FieldErrors,
   useFieldArray,
   useFormContext,
 } from "react-hook-form";
-import { FormValues } from "../../types/form";
-import Button from "../button";
-import Select from "../inputs/select";
+import { FormValues } from "../../../types/form";
+import Button from "../../button";
+import Select from "../../inputs/select";
 import {
   getAllocationsByLot,
   getOwnersByLotAllocation,
   getConditionsByLAO,
   getAvailableQty,
-} from "../../utils/lots-data";
-import Input from "../inputs/input";
+} from "../../../utils/lots-data";
+import Input from "../../inputs/input";
 
 const LotsSection: React.FC<{
   idx: number;

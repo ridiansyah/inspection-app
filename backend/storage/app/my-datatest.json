@@ -1,593 +1,888 @@
 [
-{
-    "_id": 1,
-    "no": "RRIN-2025-0103-1",
-    "status": "Completed",
-    "ecd_date": NumberInt(1735893615),
-    "create_date": NumberInt(1735893615),
-    "insp_type":{
+    {
         "_id": 1,
-        "name": "New Arrival"
-    },
-    "notes": {
-        "initial": {
-            "msg": "2 X Casing,13-3/8\",68LB/FT,L-80,JFELION,Drift:API,R3(40-44FT),STD-01,Coated.\r\nADNOC MR # 10423348.\r\nOLDMR-2024-2168",
-            "by": "MITME",
-            "by_id": 2
-        }
-    },
-    "creator_id": 1,
-    "creator_name": "Eldhos Kunjukunju",
-    "customer": {
-        "customer": 1,
-        "customer_ref": "ADNOC MR 10345183 / 10345893 / 10345620",
-        "name": "MITME",
-        "charge": true
-    },
-    "sow":{
-        "_id": 1,
-        "name": "ADNOC Requirements",
-        "scope_included": [
-           {
-             "_id": 1,
-            "name": "Coating Chemical",
-            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-           },
-           {
-                "_id": 2,
-                "name": "Visual Inspection",
-                "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-           },
-              {
-                 "_id": 3,
-                 "name": "Dimensional Inspection",
-                 "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-              }
-        ]
-    },
-    "location": {
-        "_id": 1,
-        "name": "MITME Yard"
-    },
-    "dc_code": "110004932",
-    "third_party": 2,
-    "order": [
-        {
+        "no": "RRIN-2025-0103-1",
+        "status": "Completed",
+        "ecd_date": 1735893615,
+        "create_date": 1735893615,
+        "insp_type": {
             "_id": 1,
-            "item":{
-                "_id": 1,
-                "no": "C-1338-68-L80-JFELION-STD01",
-                "name": "Casing,13-3/8",
-                "desc": "C-1338-68-L80-JFELION-STD01."
-            },
-            "qty": NumberInt(2),
-            "lots": [
+            "name": "New Arrival"
+        },
+        "notes": {
+            "initial": {
+                "msg": "2 X Casing,13-3/8\",68LB/FT,L-80,JFELION,Drift:API,R3(40-44FT),STD-01,Coated.\r\nADNOC MR # 10423348.\r\nOLDMR-2024-2168",
+                "by": "MITME",
+                "by_id": 2
+            }
+        },
+        "creator_id": 1,
+        "creator_name": "Eldhos Kunjukunju",
+        "customer": {
+            "customer": 1,
+            "customer_ref": "ADNOC MR 10345183 / 10345893 / 10345620",
+            "name": "MITME",
+            "charge": true
+        },
+        "sow": {
+            "_id": 1,
+            "name": "ADNOC Requirements",
+            "scope_included": [
                 {
                     "_id": 1,
-                    "no": "LOT-001",
-                    "selection":{
-                        "_id": 1,
-                        "name": "Lot A"
-                    },
-                    "allocation":{
-                        "_id": 1,
-                        "name": "PT Santosa"
-                    },
-                    "owner": {
-                        "_id": 1,
-                        "name": "MITME"
-                    },
-                    "condition": {
-                        "_id": 1,
-                        "name": "Good"
-                    },
-                    "avail_qty": NumberInt(2),
-                    "qty_req": NumberInt(2),
-                    "insp_req": true,
-                    "requested": {
-                        "pcs": NumberInt(2),
-                        "mt": NumberInt(20)
-                    },
-                     "pending": {
-                        "pcs": NumberInt(2),
-                        "mt": NumberInt(20)
-                    },
-                     "completed": {
-                        "pcs": NumberInt(2),
-                        "mt": NumberInt(20)
-                    },
-                    "progress": 100
+                    "name": "Coating Chemical",
+                    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 },
-                 {
+                {
                     "_id": 2,
-                    "no": "LOT-002",
-                    "selection":{
-                        "_id": 1,
-                        "name": "PT Santosa"
-                    },
-                    "allocation":{
-                        "_id": 2,
-                        "name": "Partial"
-                    },
-                    "owner": {
-                        "_id": 1,
-                        "name": "MITME"
-                    },
-                    "condition": {
-                        "_id": 2,
-                        "name": "Quarantine"
-                    },
-                    "avail_qty": NumberInt(5),
-                    "qty_req": NumberInt(5),
-                    "insp_req": true,
-                    "requested": {
-                        "pcs": NumberInt(5),
-                        "mt": NumberInt(50)
-                    },
-                     "pending": {
-                        "pcs": NumberInt(5),
-                        "mt": NumberInt(50)
-                    },
-                     "completed": {
-                        "pcs": NumberInt(5),
-                        "mt": NumberInt(50)
-                    },
-                    "progress": 100
+                    "name": "Visual Inspection",
+                    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                },
+                {
+                    "_id": 3,
+                    "name": "Dimensional Inspection",
+                    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                 }
             ]
-        }
-    ]
-},
-{
-    "_id": 2,
-    "no": "RRIN-2025-0103-2",
-    "status": "New",
-    "ecd_date": NumberInt(1736066415),
-    "create_date": NumberInt(1736066415),
-    "insp_type": { "_id": 2, "name": "Maintenance" },
-    "notes": {
-      "initial": {
-        "msg": "Incoming 9-5/8\" casing batch; visual only on arrival.",
-        "by": "ADNOC",
-        "by_id": 3
-      }
+        },
+        "location": {
+            "_id": 1,
+            "name": "MITME Yard"
+        },
+        "dc_code": "110004932",
+        "third_party": 1,
+        "order": [
+            {
+                "_id": 1,
+                "item": {
+                    "_id": 1,
+                    "no": "C-1338-68-L80-JFELION-STD01",
+                    "name": "Casing,13-3/8",
+                    "desc": "C-1338-68-L80-JFELION-STD01."
+                },
+                "qty": 2,
+                "lots": [
+                    {
+                        "_id": 1,
+                        "no": "LOT-001",
+                        "selection": {
+                            "_id": 1,
+                            "name": "Lot A"
+                        },
+                        "allocation": {
+                            "_id": 1,
+                            "name": "PT Santosa"
+                        },
+                        "owner": {
+                            "_id": 1,
+                            "name": "MITME"
+                        },
+                        "condition": {
+                            "_id": 1,
+                            "name": "Good"
+                        },
+                        "avail_qty": 2,
+                        "qty_req": 2,
+                        "insp_req": true,
+                        "requested": {
+                            "pcs": 2,
+                            "mt": 20
+                        },
+                        "pending": {
+                            "pcs": 2,
+                            "mt": 20
+                        },
+                        "completed": {
+                            "pcs": 2,
+                            "mt": 20
+                        },
+                        "progress": 100
+                    },
+                    {
+                        "_id": 2,
+                        "no": "LOT-002",
+                        "selection": {
+                            "_id": 1,
+                            "name": "PT Santosa"
+                        },
+                        "allocation": {
+                            "_id": 2,
+                            "name": "Partial"
+                        },
+                        "owner": {
+                            "_id": 1,
+                            "name": "MITME"
+                        },
+                        "condition": {
+                            "_id": 2,
+                            "name": "Quarantine"
+                        },
+                        "avail_qty": 5,
+                        "qty_req": 5,
+                        "insp_req": true,
+                        "requested": {
+                            "pcs": 5,
+                            "mt": 50
+                        },
+                        "pending": {
+                            "pcs": 5,
+                            "mt": 50
+                        },
+                        "completed": {
+                            "pcs": 5,
+                            "mt": 50
+                        },
+                        "progress": 100
+                    }
+                ]
+            }
+        ],
+        "ctc": [
+            {
+                "no": "OD-001",
+                "desc": "SERV-001 Inspection",
+                "qty": 5,
+                "price": 5,
+                "total": 25
+            },
+            {
+                "no": "OD-002",
+                "desc": "SERV-002 Inspection",
+                "qty": 2,
+                "price": 5,
+                "total": 10
+            },
+            {
+                "no": "OD-003",
+                "desc": "SERV-003 Inspection",
+                "qty": 8,
+                "price": 6,
+                "total": 48
+            },
+            {
+                "no": "OD-004",
+                "desc": "SERV-004 Inspection",
+                "qty": 3,
+                "price": 5,
+                "total": 15
+            },
+            {
+                "no": "OD-005",
+                "desc": "SERV-005 Inspection",
+                "qty": 6,
+                "price": 7,
+                "total": 42
+            }
+        ]
     },
-    "creator_id": 2,
-    "creator_name": "Alya Putri",
-    "customer": {
-      "customer": 2,
-      "customer_ref": "ADNOC PO 2025-NA-0001",
-      "name": "ADNOC",
-      "charge": false
-    },
-    "sow": {
-      "_id": 2,
-      "name": "Standard Arrival Check",
-      "scope_included": [
-        { "_id": 2, "name": "Visual Inspection", "desc": "Check dents, thread protectors, paint marks." },
-        { "_id": 3, "name": "Dimensional Inspection", "desc": "Random length & OD sampling." }
-      ]
-    },
-    "location": { "_id": 2, "name": "Abu Dhabi Yard" },
-    "dc_code": "110004933",
-    "third_party": 1,
-    "order": [
-      {
+    {
         "_id": 2,
-        "item": { "_id": 2, "no": "C-0958-47-L80-TPCO-STD01", "name": "Casing,9-5/8", "desc": "L80 TPCO STD-01." },
-        "qty": NumberInt(10),
-        "lots": [
-          {
-            "_id": 3,
-            "no": "LOT-003",
-            "selection": { "_id": 2, "name": "Lot B" },
-            "allocation": { "_id": 3, "name": "Full" },
-            "owner": { "_id": 2, "name": "ADNOC" },
-            "condition": { "_id": 1, "name": "Good" },
-            "avail_qty": NumberInt(10),
-            "qty_req": NumberInt(10),
-            "insp_req": true,
-            "requested": { "pcs": NumberInt(10), "mt": NumberInt(85) },
-            "pending": { "pcs": NumberInt(10), "mt": NumberInt(85) },
-            "completed": { "pcs": NumberInt(0), "mt": NumberInt(0) },
-            "progress": 0
-          }
+        "no": "RRIN-2025-0103-2",
+        "status": "New",
+        "ecd_date": 1736066415,
+        "create_date": 1736066415,
+        "insp_type": { "_id": 2, "name": "Maintenance" },
+        "notes": {
+            "initial": {
+                "msg": "Incoming 9-5/8\" casing batch; visual only on arrival.",
+                "by": "ADNOC",
+                "by_id": 3
+            }
+        },
+        "creator_id": 2,
+        "creator_name": "Alya Putri",
+        "customer": {
+            "customer": 2,
+            "customer_ref": "ADNOC PO 2025-NA-0001",
+            "name": "ADNOC",
+            "charge": false
+        },
+        "sow": {
+            "_id": 2,
+            "name": "Standard Arrival Check",
+            "scope_included": [
+                {
+                    "_id": 2,
+                    "name": "Visual Inspection",
+                    "desc": "Check dents, thread protectors, paint marks."
+                },
+                {
+                    "_id": 3,
+                    "name": "Dimensional Inspection",
+                    "desc": "Random length & OD sampling."
+                }
+            ]
+        },
+        "location": { "_id": 2, "name": "Abu Dhabi Yard" },
+        "dc_code": "110004933",
+        "third_party": 1,
+        "order": [
+            {
+                "_id": 2,
+                "item": {
+                    "_id": 2,
+                    "no": "C-0958-47-L80-TPCO-STD01",
+                    "name": "Casing,9-5/8",
+                    "desc": "L80 TPCO STD-01."
+                },
+                "qty": 10,
+                "lots": [
+                    {
+                        "_id": 3,
+                        "no": "LOT-003",
+                        "selection": { "_id": 2, "name": "Lot B" },
+                        "allocation": { "_id": 3, "name": "Full" },
+                        "owner": { "_id": 2, "name": "ADNOC" },
+                        "condition": { "_id": 1, "name": "Good" },
+                        "avail_qty": 10,
+                        "qty_req": 10,
+                        "insp_req": true,
+                        "requested": { "pcs": 10, "mt": 85 },
+                        "pending": { "pcs": 10, "mt": 85 },
+                        "completed": { "pcs": 0, "mt": 0 },
+                        "progress": 0
+                    }
+                ]
+            }
+        ],
+        "ctc": [
+            {
+                "no": "OD-006",
+                "desc": "Visual Arrival Check",
+                "qty": 10,
+                "price": 4,
+                "total": 40
+            },
+            {
+                "no": "OD-007",
+                "desc": "Dimensional Sampling",
+                "qty": 3,
+                "price": 6,
+                "total": 18
+            }
         ]
-      }
-    ]
-  },
-  {
-    "_id": 3,
-    "no": "RRIN-2025-0103-3",
-    "status": "New",
-    "ecd_date": NumberInt(1736152815),
-    "create_date": NumberInt(1736152815),
-    "insp_type": { "_id": 1, "name": "New Arrival" },
-    "notes": {
-      "initial": {
-        "msg": "Customer reports coating blistering on random joints.",
-        "by": "MITME",
-        "by_id": 2
-      }
     },
-    "creator_id": 3,
-    "creator_name": "Rudi Hartono",
-    "customer": {
-      "customer": 3,
-      "customer_ref": "WO-ODM-2025-0007",
-      "name": "Third Party Co.",
-      "charge": true
-    },
-    "sow": {
-      "_id": 3,
-      "name": "Coating & NDT Check",
-      "scope_included": [
-        { "_id": 1, "name": "Coating Chemical", "desc": "Coating adhesion test & chemical check." },
-        { "_id": 4, "name": "Magnetic Particle", "desc": "NDT for surface cracks at threads." }
-      ]
-    },
-    "location": { "_id": 3, "name": "Dubai Port" },
-    "dc_code": "110004934",
-    "third_party": 3,
-    "order": [
-      {
+    {
         "_id": 3,
-        "item": { "_id": 3, "no": "T-0350-16-GR-BTC-HT", "name": "Tubing,3-1/2", "desc": "Grade G Rod, BTC, Heat-Treated." },
-        "qty": NumberInt(30),
-        "lots": [
-          {
-            "_id": 4,
-            "no": "LOT-004",
-            "selection": { "_id": 3, "name": "Lot C" },
-            "allocation": { "_id": 2, "name": "Partial" },
-            "owner": { "_id": 3, "name": "Third Party Co." },
-            "condition": { "_id": 4, "name": "Recoat Required" },
-            "avail_qty": NumberInt(30),
-            "qty_req": NumberInt(12),
-            "insp_req": true,
-            "requested": { "pcs": NumberInt(12), "mt": NumberInt(9) },
-            "pending": { "pcs": NumberInt(12), "mt": NumberInt(9) },
-            "completed": { "pcs": NumberInt(0), "mt": NumberInt(0) },
-            "progress": 0
-          }
+        "no": "RRIN-2025-0103-3",
+        "status": "New",
+        "ecd_date": 1736152815,
+        "create_date": 1736152815,
+        "insp_type": { "_id": 1, "name": "New Arrival" },
+        "notes": {
+            "initial": {
+                "msg": "Customer reports coating blistering on random joints.",
+                "by": "MITME",
+                "by_id": 2
+            }
+        },
+        "creator_id": 3,
+        "creator_name": "Rudi Hartono",
+        "customer": {
+            "customer": 3,
+            "customer_ref": "WO-ODM-2025-0007",
+            "name": "Third Party Co.",
+            "charge": true
+        },
+        "sow": {
+            "_id": 3,
+            "name": "Coating & NDT Check",
+            "scope_included": [
+                {
+                    "_id": 1,
+                    "name": "Coating Chemical",
+                    "desc": "Coating adhesion test & chemical check."
+                },
+                {
+                    "_id": 4,
+                    "name": "Magnetic Particle",
+                    "desc": "NDT for surface cracks at threads."
+                }
+            ]
+        },
+        "location": { "_id": 3, "name": "Dubai Port" },
+        "dc_code": "110004934",
+        "third_party": 1,
+        "order": [
+            {
+                "_id": 3,
+                "item": {
+                    "_id": 3,
+                    "no": "T-0350-16-GR-BTC-HT",
+                    "name": "Tubing,3-1/2",
+                    "desc": "Grade G Rod, BTC, Heat-Treated."
+                },
+                "qty": 30,
+                "lots": [
+                    {
+                        "_id": 4,
+                        "no": "LOT-004",
+                        "selection": { "_id": 3, "name": "Lot C" },
+                        "allocation": { "_id": 2, "name": "Partial" },
+                        "owner": { "_id": 3, "name": "Third Party Co." },
+                        "condition": { "_id": 4, "name": "Recoat Required" },
+                        "avail_qty": 30,
+                        "qty_req": 12,
+                        "insp_req": true,
+                        "requested": { "pcs": 12, "mt": 9 },
+                        "pending": { "pcs": 12, "mt": 9 },
+                        "completed": { "pcs": 0, "mt": 0 },
+                        "progress": 0
+                    }
+                ]
+            }
+        ],
+        "ctc": [
+            {
+                "no": "OD-008",
+                "desc": "Coating Test",
+                "qty": 12,
+                "price": 8,
+                "total": 96
+            },
+            {
+                "no": "OD-009",
+                "desc": "Magnetic Particle",
+                "qty": 5,
+                "price": 7,
+                "total": 35
+            },
+            {
+                "no": "OD-010",
+                "desc": "Report Fee",
+                "qty": 1,
+                "price": 15,
+                "total": 15
+            }
         ]
-      }
-    ]
-  },
-  {
-    "_id": 4,
-    "no": "RRIN-2025-0103-4",
-    "status": "In Progress",
-    "ecd_date": NumberInt(1736239215),
-    "create_date": NumberInt(1736152815),
-    "insp_type": { "_id": 2, "name": "Maintenance" },
-    "notes": {
-      "initial": { "msg": "Routine quarterly inspection.", "by": "QA", "by_id": 5 }
     },
-    "creator_id": 4,
-    "creator_name": "Sari Ningsih",
-    "customer": {
-      "customer": 1,
-      "customer_ref": "RM-2025-Q1-0002",
-      "name": "MITME",
-      "charge": true
-    },
-    "sow": {
-      "_id": 4,
-      "name": "Routine Visual + Dimensional",
-      "scope_included": [
-        { "_id": 2, "name": "Visual Inspection", "desc": "Full external visual." },
-        { "_id": 3, "name": "Dimensional Inspection", "desc": "Thread & OD/ID sampling." }
-      ]
-    },
-    "location": { "_id": 1, "name": "MITME Yard" },
-    "dc_code": "110004935",
-    "third_party": 2,
-    "order": [
-      {
+    {
         "_id": 4,
-        "item": { "_id": 4, "no": "C-1338-68-L80-JFE-STD02", "name": "Casing,13-3/8", "desc": "JFE STD-02." },
-        "qty": NumberInt(6),
-        "lots": [
-          {
-            "_id": 5,
-            "no": "LOT-005",
-            "selection": { "_id": 1, "name": "Lot A" },
-            "allocation": { "_id": 3, "name": "Full" },
-            "owner": { "_id": 1, "name": "MITME" },
-            "condition": { "_id": 1, "name": "Good" },
-            "avail_qty": NumberInt(6),
-            "qty_req": NumberInt(6),
-            "insp_req": true,
-            "requested": { "pcs": NumberInt(6), "mt": NumberInt(60) },
-            "pending": { "pcs": NumberInt(2), "mt": NumberInt(20) },
-            "completed": { "pcs": NumberInt(4), "mt": NumberInt(40) },
-            "progress": 66
-          }
+        "no": "RRIN-2025-0103-4",
+        "status": "In Progress",
+        "ecd_date": 1736239215,
+        "create_date": 1736152815,
+        "insp_type": { "_id": 2, "name": "Maintenance" },
+        "notes": {
+            "initial": {
+                "msg": "Routine quarterly inspection.",
+                "by": "QA",
+                "by_id": 5
+            }
+        },
+        "creator_id": 4,
+        "creator_name": "Sari Ningsih",
+        "customer": {
+            "customer": 1,
+            "customer_ref": "RM-2025-Q1-0002",
+            "name": "MITME",
+            "charge": true
+        },
+        "sow": {
+            "_id": 4,
+            "name": "Routine Visual + Dimensional",
+            "scope_included": [
+                {
+                    "_id": 2,
+                    "name": "Visual Inspection",
+                    "desc": "Full external visual."
+                },
+                {
+                    "_id": 3,
+                    "name": "Dimensional Inspection",
+                    "desc": "Thread & OD/ID sampling."
+                }
+            ]
+        },
+        "location": { "_id": 1, "name": "MITME Yard" },
+        "dc_code": "110004935",
+        "third_party": 1,
+        "order": [
+            {
+                "_id": 4,
+                "item": {
+                    "_id": 4,
+                    "no": "C-1338-68-L80-JFE-STD02",
+                    "name": "Casing,13-3/8",
+                    "desc": "JFE STD-02."
+                },
+                "qty": 6,
+                "lots": [
+                    {
+                        "_id": 5,
+                        "no": "LOT-005",
+                        "selection": { "_id": 1, "name": "Lot A" },
+                        "allocation": { "_id": 3, "name": "Full" },
+                        "owner": { "_id": 1, "name": "MITME" },
+                        "condition": { "_id": 1, "name": "Good" },
+                        "avail_qty": 6,
+                        "qty_req": 6,
+                        "insp_req": true,
+                        "requested": { "pcs": 6, "mt": 60 },
+                        "pending": { "pcs": 2, "mt": 20 },
+                        "completed": { "pcs": 4, "mt": 40 },
+                        "progress": 66
+                    }
+                ]
+            }
+        ],
+        "ctc": [
+            {
+                "no": "OD-011",
+                "desc": "Routine Visual",
+                "qty": 6,
+                "price": 5,
+                "total": 30
+            },
+            {
+                "no": "OD-012",
+                "desc": "Dimensional Sampling",
+                "qty": 2,
+                "price": 7,
+                "total": 14
+            }
         ]
-      }
-    ]
-  },
-  {
-    "_id": 5,
-    "no": "RRIN-2025-0103-5",
-    "status": "In Progress",
-    "ecd_date": NumberInt(1736325615),
-    "create_date": NumberInt(1736152815),
-    "insp_type": { "_id": 3, "name": "On Spot" },
-    "notes": {
-      "initial": { "msg": "Thread damage sampling underway.", "by": "QC", "by_id": 5 }
     },
-    "creator_id": 5,
-    "creator_name": "Eldhos Kunjukunju",
-    "customer": {
-      "customer": 2,
-      "customer_ref": "ADNOC RM 2025-02",
-      "name": "ADNOC",
-      "charge": false
-    },
-    "sow": {
-      "_id": 5,
-      "name": "Routine + NDT",
-      "scope_included": [
-        { "_id": 2, "name": "Visual Inspection", "desc": "Threads & body." },
-        { "_id": 4, "name": "Magnetic Particle", "desc": "Critical threads." }
-      ]
-    },
-    "location": { "_id": 2, "name": "Abu Dhabi Yard" },
-    "dc_code": "110004936",
-    "third_party": 1,
-    "order": [
-      {
+    {
         "_id": 5,
-        "item": { "_id": 5, "no": "L-0800-10-PUP-JT", "name": "Line Pipe,8\"", "desc": "PUP joints 8\" JT." },
-        "qty": NumberInt(12),
-        "lots": [
-          {
-            "_id": 6,
-            "no": "LOT-006",
-            "selection": { "_id": 2, "name": "Lot B" },
-            "allocation": { "_id": 2, "name": "Partial" },
-            "owner": { "_id": 2, "name": "ADNOC" },
-            "condition": { "_id": 2, "name": "Quarantine" },
-            "avail_qty": NumberInt(12),
-            "qty_req": NumberInt(8),
-            "insp_req": true,
-            "requested": { "pcs": NumberInt(8), "mt": NumberInt(24) },
-            "pending": { "pcs": NumberInt(5), "mt": NumberInt(15) },
-            "completed": { "pcs": NumberInt(3), "mt": NumberInt(9) },
-            "progress": 37
-          }
+        "no": "RRIN-2025-0103-5",
+        "status": "In Progress",
+        "ecd_date": 1736325615,
+        "create_date": 1736152815,
+        "insp_type": { "_id": 3, "name": "On Spot" },
+        "notes": {
+            "initial": {
+                "msg": "Thread damage sampling underway.",
+                "by": "QC",
+                "by_id": 5
+            }
+        },
+        "creator_id": 5,
+        "creator_name": "Eldhos Kunjukunju",
+        "customer": {
+            "customer": 2,
+            "customer_ref": "ADNOC RM 2025-02",
+            "name": "ADNOC",
+            "charge": false
+        },
+        "sow": {
+            "_id": 5,
+            "name": "Routine + NDT",
+            "scope_included": [
+                {
+                    "_id": 2,
+                    "name": "Visual Inspection",
+                    "desc": "Threads & body."
+                },
+                {
+                    "_id": 4,
+                    "name": "Magnetic Particle",
+                    "desc": "Critical threads."
+                }
+            ]
+        },
+        "location": { "_id": 2, "name": "Abu Dhabi Yard" },
+        "dc_code": "110004936",
+        "third_party": 1,
+        "order": [
+            {
+                "_id": 5,
+                "item": {
+                    "_id": 5,
+                    "no": "L-0800-10-PUP-JT",
+                    "name": "Line Pipe,8\"",
+                    "desc": "PUP joints 8\" JT."
+                },
+                "qty": 12,
+                "lots": [
+                    {
+                        "_id": 6,
+                        "no": "LOT-006",
+                        "selection": { "_id": 2, "name": "Lot B" },
+                        "allocation": { "_id": 2, "name": "Partial" },
+                        "owner": { "_id": 2, "name": "ADNOC" },
+                        "condition": { "_id": 2, "name": "Quarantine" },
+                        "avail_qty": 12,
+                        "qty_req": 8,
+                        "insp_req": true,
+                        "requested": { "pcs": 8, "mt": 24 },
+                        "pending": { "pcs": 5, "mt": 15 },
+                        "completed": { "pcs": 3, "mt": 9 },
+                        "progress": 37
+                    }
+                ]
+            }
+        ],
+        "ctc": [
+            {
+                "no": "OD-013",
+                "desc": "Thread Damage Check",
+                "qty": 8,
+                "price": 6,
+                "total": 48
+            },
+            {
+                "no": "OD-014",
+                "desc": "Magnetic Particle",
+                "qty": 4,
+                "price": 8,
+                "total": 32
+            }
         ]
-      }
-    ]
-  },
-  {
-    "_id": 6,
-    "no": "RRIN-2025-0103-6",
-    "status": "For Review",
-    "ecd_date": NumberInt(1736412015),
-    "create_date": NumberInt(1736240015),
-    "insp_type": { "_id": 1, "name": "New Arrival" },
-    "notes": {
-      "initial": {
-        "msg": "Returned after rental; verify wear & straightness.",
-        "by": "Ops",
-        "by_id": 6
-      }
     },
-    "creator_id": 6,
-    "creator_name": "Naufal Rizky",
-    "customer": {
-      "customer": 1,
-      "customer_ref": "RET-2025-0009",
-      "name": "MITME",
-      "charge": true
-    },
-    "sow": {
-      "_id": 6,
-      "name": "Return Visual + Drift",
-      "scope_included": [
-        { "_id": 2, "name": "Visual Inspection", "desc": "Full body wear check." },
-        { "_id": 6, "name": "Drift Test", "desc": "API drift per spec." }
-      ]
-    },
-    "location": { "_id": 1, "name": "MITME Yard" },
-    "dc_code": "110004937",
-    "third_party": 2,
-    "order": [
-      {
+    {
         "_id": 6,
-        "item": { "_id": 6, "no": "C-0510-23-J55-BTC", "name": "Casing,5\"", "desc": "J55 BTC." },
-        "qty": NumberInt(20),
-        "lots": [
-          {
-            "_id": 7,
-            "no": "LOT-007",
-            "selection": { "_id": 1, "name": "Lot A" },
-            "allocation": { "_id": 3, "name": "Full" },
-            "owner": { "_id": 1, "name": "MITME" },
-            "condition": { "_id": 1, "name": "Good" },
-            "avail_qty": NumberInt(20),
-            "qty_req": NumberInt(20),
-            "insp_req": true,
-            "requested": { "pcs": NumberInt(20), "mt": NumberInt(50) },
-            "pending": { "pcs": NumberInt(0), "mt": NumberInt(0) },
-            "completed": { "pcs": NumberInt(20), "mt": NumberInt(50) },
-            "progress": 95
-          }
+        "no": "RRIN-2025-0103-6",
+        "status": "For Review",
+        "ecd_date": 1736412015,
+        "create_date": 1736240015,
+        "insp_type": { "_id": 1, "name": "New Arrival" },
+        "notes": {
+            "initial": {
+                "msg": "Returned after rental; verify wear & straightness.",
+                "by": "Ops",
+                "by_id": 6
+            }
+        },
+        "creator_id": 6,
+        "creator_name": "Naufal Rizky",
+        "customer": {
+            "customer": 1,
+            "customer_ref": "RET-2025-0009",
+            "name": "MITME",
+            "charge": true
+        },
+        "sow": {
+            "_id": 6,
+            "name": "Return Visual + Drift",
+            "scope_included": [
+                {
+                    "_id": 2,
+                    "name": "Visual Inspection",
+                    "desc": "Full body wear check."
+                },
+                {
+                    "_id": 6,
+                    "name": "Drift Test",
+                    "desc": "API drift per spec."
+                }
+            ]
+        },
+        "location": { "_id": 1, "name": "MITME Yard" },
+        "dc_code": "110004937",
+        "third_party": 1,
+        "order": [
+            {
+                "_id": 6,
+                "item": {
+                    "_id": 6,
+                    "no": "C-0510-23-J55-BTC",
+                    "name": "Casing,5\"",
+                    "desc": "J55 BTC."
+                },
+                "qty": 20,
+                "lots": [
+                    {
+                        "_id": 7,
+                        "no": "LOT-007",
+                        "selection": { "_id": 1, "name": "Lot A" },
+                        "allocation": { "_id": 3, "name": "Full" },
+                        "owner": { "_id": 1, "name": "MITME" },
+                        "condition": { "_id": 1, "name": "Good" },
+                        "avail_qty": 20,
+                        "qty_req": 20,
+                        "insp_req": true,
+                        "requested": { "pcs": 20, "mt": 50 },
+                        "pending": { "pcs": 0, "mt": 0 },
+                        "completed": { "pcs": 20, "mt": 50 },
+                        "progress": 95
+                    }
+                ]
+            }
+        ],
+        "ctc": [
+            {
+                "no": "OD-015",
+                "desc": "Return Visual",
+                "qty": 20,
+                "price": 3,
+                "total": 60
+            },
+            {
+                "no": "OD-016",
+                "desc": "Drift Test",
+                "qty": 10,
+                "price": 5,
+                "total": 50
+            }
         ]
-      }
-    ]
-  },
-  {
-    "_id": 7,
-    "no": "RRIN-2025-0103-7",
-    "status": "For Review",
-    "ecd_date": NumberInt(1736498415),
-    "create_date": NumberInt(1736325615),
-    "insp_type": { "_id": 2, "name": "Maintenance" },
-    "notes": {
-      "initial": {
-        "msg": "Report drafted, waiting QC sign-off.",
-        "by": "Inspector A",
-        "by_id": 10
-      }
     },
-    "creator_id": 7,
-    "creator_name": "Dewi Anjani",
-    "customer": {
-      "customer": 2,
-      "customer_ref": "ADNOC RM 2025-03",
-      "name": "ADNOC",
-      "charge": false
-    },
-    "sow": {
-      "_id": 7,
-      "name": "Routine + Thread Gauging",
-      "scope_included": [
-        { "_id": 3, "name": "Dimensional Inspection", "desc": "Thread gauge checks." },
-        { "_id": 7, "name": "Hydro Test", "desc": "Hydrostatic test random sampling." }
-      ]
-    },
-    "location": { "_id": 2, "name": "Abu Dhabi Yard" },
-    "dc_code": "110004938",
-    "third_party": 1,
-    "order": [
-      {
+    {
         "_id": 7,
-        "item": { "_id": 7, "no": "C-1338-68-P110-VAM", "name": "Casing,13-3/8", "desc": "P110 VAM connection." },
-        "qty": NumberInt(4),
-        "lots": [
-          {
-            "_id": 8,
-            "no": "LOT-008",
-            "selection": { "_id": 2, "name": "Lot B" },
-            "allocation": { "_id": 2, "name": "Partial" },
-            "owner": { "_id": 2, "name": "ADNOC" },
-            "condition": { "_id": 1, "name": "Good" },
-            "avail_qty": NumberInt(4),
-            "qty_req": NumberInt(4),
-            "insp_req": true,
-            "requested": { "pcs": NumberInt(4), "mt": NumberInt(36) },
-            "pending": { "pcs": NumberInt(0), "mt": NumberInt(0) },
-            "completed": { "pcs": NumberInt(4), "mt": NumberInt(36) },
-            "progress": 92
-          }
+        "no": "RRIN-2025-0103-7",
+        "status": "For Review",
+        "ecd_date": 1736498415,
+        "create_date": 1736325615,
+        "insp_type": { "_id": 2, "name": "Maintenance" },
+        "notes": {
+            "initial": {
+                "msg": "Report drafted, waiting QC sign-off.",
+                "by": "Inspector A",
+                "by_id": 10
+            }
+        },
+        "creator_id": 7,
+        "creator_name": "Dewi Anjani",
+        "customer": {
+            "customer": 2,
+            "customer_ref": "ADNOC RM 2025-03",
+            "name": "ADNOC",
+            "charge": false
+        },
+        "sow": {
+            "_id": 7,
+            "name": "Routine + Thread Gauging",
+            "scope_included": [
+                {
+                    "_id": 3,
+                    "name": "Dimensional Inspection",
+                    "desc": "Thread gauge checks."
+                },
+                {
+                    "_id": 7,
+                    "name": "Hydro Test",
+                    "desc": "Hydrostatic test random sampling."
+                }
+            ]
+        },
+        "location": { "_id": 2, "name": "Abu Dhabi Yard" },
+        "dc_code": "110004938",
+        "third_party": 1,
+        "order": [
+            {
+                "_id": 7,
+                "item": {
+                    "_id": 7,
+                    "no": "C-1338-68-P110-VAM",
+                    "name": "Casing,13-3/8",
+                    "desc": "P110 VAM connection."
+                },
+                "qty": 4,
+                "lots": [
+                    {
+                        "_id": 8,
+                        "no": "LOT-008",
+                        "selection": { "_id": 2, "name": "Lot B" },
+                        "allocation": { "_id": 2, "name": "Partial" },
+                        "owner": { "_id": 2, "name": "ADNOC" },
+                        "condition": { "_id": 1, "name": "Good" },
+                        "avail_qty": 4,
+                        "qty_req": 4,
+                        "insp_req": true,
+                        "requested": { "pcs": 4, "mt": 36 },
+                        "pending": { "pcs": 0, "mt": 0 },
+                        "completed": { "pcs": 4, "mt": 36 },
+                        "progress": 92
+                    }
+                ]
+            }
+        ],
+        "ctc": [
+            {
+                "no": "OD-017",
+                "desc": "Thread Gauging",
+                "qty": 4,
+                "price": 7,
+                "total": 28
+            },
+            {
+                "no": "OD-018",
+                "desc": "Hydro Test",
+                "qty": 2,
+                "price": 10,
+                "total": 20
+            }
         ]
-      }
-    ]
-  },
-  {
-    "_id": 8,
-    "no": "RRIN-2025-0103-8",
-    "status": "Ready to Review",
-    "ecd_date": NumberInt(1736584815),
-    "create_date": NumberInt(1736400015),
-    "insp_type": { "_id": 3, "name": "On Spot" },
-    "notes": {
-      "initial": {
-        "msg": "All inspections complete. Attach photos in report.",
-        "by": "Inspector B",
-        "by_id": 11
-      }
     },
-    "creator_id": 8,
-    "creator_name": "Rama Dimas",
-    "customer": {
-      "customer": 3,
-      "customer_ref": "NA-2025-0012",
-      "name": "Third Party Co.",
-      "charge": true
-    },
-    "sow": {
-      "_id": 2,
-      "name": "Standard Arrival Check",
-      "scope_included": [
-        { "_id": 2, "name": "Visual Inspection", "desc": "Check dents, thread protectors, paint marks." },
-        { "_id": 3, "name": "Dimensional Inspection", "desc": "Random length & OD sampling." }
-      ]
-    },
-    "location": { "_id": 3, "name": "Dubai Port" },
-    "dc_code": "110004939",
-    "third_party": 3,
-    "order": [
-      {
+    {
         "_id": 8,
-        "item": { "_id": 8, "no": "T-0275-08-N80-EUE", "name": "Tubing,2-7/8", "desc": "N80 EUE." },
-        "qty": NumberInt(50),
-        "lots": [
-          {
-            "_id": 9,
-            "no": "LOT-009",
-            "selection": { "_id": 3, "name": "Lot C" },
-            "allocation": { "_id": 3, "name": "Full" },
-            "owner": { "_id": 3, "name": "Third Party Co." },
-            "condition": { "_id": 1, "name": "Good" },
-            "avail_qty": NumberInt(50),
-            "qty_req": NumberInt(50),
-            "insp_req": true,
-            "requested": { "pcs": NumberInt(50), "mt": NumberInt(120) },
-            "pending": { "pcs": NumberInt(0), "mt": NumberInt(0) },
-            "completed": { "pcs": NumberInt(50), "mt": NumberInt(120) },
-            "progress": 100
-          }
+        "no": "RRIN-2025-0103-8",
+        "status": "Ready to Review",
+        "ecd_date": 1736584815,
+        "create_date": 1736400015,
+        "insp_type": { "_id": 3, "name": "On Spot" },
+        "notes": {
+            "initial": {
+                "msg": "All inspections complete. Attach photos in report.",
+                "by": "Inspector B",
+                "by_id": 11
+            }
+        },
+        "creator_id": 8,
+        "creator_name": "Rama Dimas",
+        "customer": {
+            "customer": 3,
+            "customer_ref": "NA-2025-0012",
+            "name": "Third Party Co.",
+            "charge": true
+        },
+        "sow": {
+            "_id": 2,
+            "name": "Standard Arrival Check",
+            "scope_included": [
+                {
+                    "_id": 2,
+                    "name": "Visual Inspection",
+                    "desc": "Check dents, thread protectors, paint marks."
+                },
+                {
+                    "_id": 3,
+                    "name": "Dimensional Inspection",
+                    "desc": "Random length & OD sampling."
+                }
+            ]
+        },
+        "location": { "_id": 3, "name": "Dubai Port" },
+        "dc_code": "110004939",
+        "third_party": 1,
+        "order": [
+            {
+                "_id": 8,
+                "item": {
+                    "_id": 8,
+                    "no": "T-0275-08-N80-EUE",
+                    "name": "Tubing,2-7/8",
+                    "desc": "N80 EUE."
+                },
+                "qty": 50,
+                "lots": [
+                    {
+                        "_id": 9,
+                        "no": "LOT-009",
+                        "selection": { "_id": 3, "name": "Lot C" },
+                        "allocation": { "_id": 3, "name": "Full" },
+                        "owner": { "_id": 3, "name": "Third Party Co." },
+                        "condition": { "_id": 1, "name": "Good" },
+                        "avail_qty": 50,
+                        "qty_req": 50,
+                        "insp_req": true,
+                        "requested": { "pcs": 50, "mt": 120 },
+                        "pending": { "pcs": 0, "mt": 0 },
+                        "completed": { "pcs": 50, "mt": 120 },
+                        "progress": 100
+                    }
+                ]
+            }
+        ],
+        "ctc": [
+            {
+                "no": "OD-019",
+                "desc": "Visual Inspection",
+                "qty": 50,
+                "price": 2,
+                "total": 100
+            },
+            {
+                "no": "OD-020",
+                "desc": "Dimensional Inspection",
+                "qty": 10,
+                "price": 5,
+                "total": 50
+            },
+            {
+                "no": "OD-021",
+                "desc": "Photo Attachment",
+                "qty": 1,
+                "price": 10,
+                "total": 10
+            }
         ]
-      }
-    ]
-  },
-  {
-    "_id": 9,
-    "no": "RRIN-2025-0103-9",
-    "status": "Ready to Review",
-    "ecd_date": NumberInt(1736671215),
-    "create_date": NumberInt(1736486415),
-    "insp_type": { "_id": 3, "name": "On Spot" },
-    "notes": {
-      "initial": { "msg": "Emergency check completed; awaiting approval.", "by": "Shift Lead", "by_id": 22 }
     },
-    "creator_id": 9,
-    "creator_name": "Fajar Setiawan",
-    "customer": {
-      "customer": 1,
-      "customer_ref": "EMG-ODM-2025-0003",
-      "name": "MITME",
-      "charge": true
-    },
-    "sow": {
-      "_id": 8,
-      "name": "ODM Quick Check",
-      "scope_included": [
-        { "_id": 2, "name": "Visual Inspection", "desc": "Quick visuals on key joints." },
-        { "_id": 5, "name": "Ultrasonic Test", "desc": "UT on suspected thin-wall areas." }
-      ]
-    },
-    "location": { "_id": 1, "name": "MITME Yard" },
-    "dc_code": "110004940",
-    "third_party": 1,
-    "order": [
-      {
+    {
         "_id": 9,
-        "item": { "_id": 9, "no": "X-VALVE-6K-2IN", "name": "Valve 2\" 6K", "desc": "Gate valve 2 inch 6K rating." },
-        "qty": NumberInt(3),
-        "lots": [
-          {
-            "_id": 10,
-            "no": "LOT-010",
-            "selection": { "_id": 1, "name": "Lot A" },
-            "allocation": { "_id": 2, "name": "Partial" },
-            "owner": { "_id": 1, "name": "MITME" },
-            "condition": { "_id": 3, "name": "Damaged" },
-            "avail_qty": NumberInt(3),
-            "qty_req": NumberInt(3),
-            "insp_req": true,
-            "requested": { "pcs": NumberInt(3), "mt": NumberInt(1) },
-            "pending": { "pcs": NumberInt(0), "mt": NumberInt(0) },
-            "completed": { "pcs": NumberInt(3), "mt": NumberInt(1) },
-            "progress": 100
-          }
+        "no": "RRIN-2025-0103-9",
+        "status": "Ready to Review",
+        "ecd_date": 1736671215,
+        "create_date": 1736486415,
+        "insp_type": { "_id": 3, "name": "On Spot" },
+        "notes": {
+            "initial": {
+                "msg": "Emergency check completed; awaiting approval.",
+                "by": "Shift Lead",
+                "by_id": 22
+            }
+        },
+        "creator_id": 9,
+        "creator_name": "Fajar Setiawan",
+        "customer": {
+            "customer": 1,
+            "customer_ref": "EMG-ODM-2025-0003",
+            "name": "MITME",
+            "charge": true
+        },
+        "sow": {
+            "_id": 8,
+            "name": "ODM Quick Check",
+            "scope_included": [
+                {
+                    "_id": 2,
+                    "name": "Visual Inspection",
+                    "desc": "Quick visuals on key joints."
+                },
+                {
+                    "_id": 5,
+                    "name": "Ultrasonic Test",
+                    "desc": "UT on suspected thin-wall areas."
+                }
+            ]
+        },
+        "location": { "_id": 1, "name": "MITME Yard" },
+        "dc_code": "110004940",
+        "third_party": 1,
+        "order": [
+            {
+                "_id": 9,
+                "item": {
+                    "_id": 9,
+                    "no": "X-VALVE-6K-2IN",
+                    "name": "Valve 2\" 6K",
+                    "desc": "Gate valve 2 inch 6K rating."
+                },
+                "qty": 3,
+                "lots": [
+                    {
+                        "_id": 10,
+                        "no": "LOT-010",
+                        "selection": { "_id": 1, "name": "Lot A" },
+                        "allocation": { "_id": 2, "name": "Partial" },
+                        "owner": { "_id": 1, "name": "MITME" },
+                        "condition": { "_id": 3, "name": "Damaged" },
+                        "avail_qty": 3,
+                        "qty_req": 3,
+                        "insp_req": true,
+                        "requested": { "pcs": 3, "mt": 1 },
+                        "pending": { "pcs": 0, "mt": 0 },
+                        "completed": { "pcs": 3, "mt": 1 },
+                        "progress": 100
+                    }
+                ]
+            }
+        ],
+        "ctc": [
+            {
+                "no": "OD-022",
+                "desc": "Emergency Visual",
+                "qty": 3,
+                "price": 10,
+                "total": 30
+            },
+            {
+                "no": "OD-023",
+                "desc": "Ultrasonic Test",
+                "qty": 2,
+                "price": 12,
+                "total": 24
+            }
         ]
-      }
-    ]
-  }
+    }
 ]

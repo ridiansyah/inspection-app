@@ -147,7 +147,6 @@ const mastersSlice = createSlice({
       { no: "NA-TP-2025-0014", customer_id: 3 },
       { no: "QA-TP-2025-0003", customer_id: 3 },
     ],
-    ///////
     items: [
       {
         _id: 1,

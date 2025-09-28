@@ -190,6 +190,14 @@ export interface Order {
   lots: Lot[];
 }
 
+export interface ChargeToCustomer {
+  no: string;
+  desc: string;
+  qty: number;
+  price: number;
+  total: number;
+}
+
 export interface InspectionRecord {
   _id: number; //generated on creation
   no: string; //formatted as "RRIN-YYYY-MMDD-N"
@@ -223,6 +231,7 @@ export interface InspectionRecord {
   dc_code: string; //D/C Code
   order: Order[]; // Order information
   third_party: number; // third party
+  ctc: ChargeToCustomer[];
 }
 
 export interface InspectionState {

@@ -1,9 +1,10 @@
-import { InspectionRecord } from "../../types/inspection";
+import { InspectionRecord } from "../../../types/inspection";
 import React, { useState } from "react";
-import Icon from "../../components/icon";
-import Badge from "../../components/badge";
-import { formatDate } from "../../utils/utils";
-import { Tooltip } from "../tooltip";
+import Icon from "../../../components/icon";
+import Badge from "../../../components/badge";
+import { formatDate } from "../../../utils/utils";
+import { Tooltip } from "../../tooltip";
+import { useNavigate } from "react-router-dom";
 
 interface InspectionTableProps {
   records: InspectionRecord[];
@@ -14,6 +15,7 @@ const InspectionTable: React.FC<InspectionTableProps> = ({
   records,
   loading,
 }) => {
+  const navigate = useNavigate();
   const [expandedRows, setExpandedRows] = useState<Set<number>>(new Set());
 
   const toggleRow = (recordId: number) => {
@@ -79,7 +81,14 @@ const InspectionTable: React.FC<InspectionTableProps> = ({
                     onClick={() => toggleRow(record._id)}
                   >
                     <td className="px-3 xl:px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                      <span className="truncate max-w-[120px] xl:max-w-none">
+                      <span
+                        className="truncate max-w-[120px] xl:max-w-none"
+                        onClick={(event) => {
+                          event.preventDefault();
+                          event.stopPropagation();
+                          navigate(`/inspection-record/${record._id}`);
+                        }}
+                      >
                         {record.no}
                       </span>
                     </td>

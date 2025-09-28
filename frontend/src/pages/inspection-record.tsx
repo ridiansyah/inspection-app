@@ -10,7 +10,7 @@ import StatusFilter from "../components/inputs/status-filter";
 import Button from "../components/button";
 import SearchBox from "../components/inputs/search-box";
 import Icon from "../components/icon";
-import InspectionTable from "../components/features/inspection-table";
+import InspectionTable from "../components/features/record/inspection-table";
 import { formatDate } from "../utils/utils";
 import DefaultLayout from "../layouts/default-layout";
 import ExportButton from "../components/export-button";

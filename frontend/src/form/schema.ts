@@ -115,9 +115,9 @@ const schema = yup.object({
                 .number()
                 .min(1, "Min 1")
                 .required()
-                .lessThan(
+                .max(
                   yup.ref("avail_qty"),
-                  "Request qty must be less than available qty"
+                  "Request qty must be less than or equal to available qty"
                 ),
               insp_req: yup.boolean().required(),
             })
