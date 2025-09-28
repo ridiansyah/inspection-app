@@ -17,16 +17,16 @@ const ChargesToCustomer: React.FC<{ data?: InspectionRecord["ctc"] }> = ({
       <table className="w-full">
         <thead>
           <tr className="bg-gray-100">
-            <th className="text-left text-gray-700 p-3">
+            <th className="text-left text-gray-700 p-3 whitespace-nowrap">
               <Label>Order No.</Label>
             </th>
-            <th className="text-left text-gray-700 p-3">
+            <th className="text-left text-gray-700 p-3 whitespace-nowrap">
               <Label>Service Description</Label>
             </th>
             <th className="text-left text-gray-700 p-3">
               <Label>Qty</Label>
             </th>
-            <th className="text-left text-gray-700 p-3">
+            <th className="text-left text-gray-700 p-3 whitespace-nowrap">
               <Label>Unit Price</Label>
             </th>
             <th className="text-left text-gray-700 p-3">

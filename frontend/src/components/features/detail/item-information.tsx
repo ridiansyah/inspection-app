@@ -11,13 +11,22 @@ const ItemInformation: React.FC<{ data?: InspectionRecord["order"] }> = ({
       <table className="w-full">
         <thead>
           <tr className="bg-gray-100">
-            <th rowSpan={2} className="text-left p-3 text-gray-700">
+            <th
+              rowSpan={2}
+              className="text-left p-3 text-gray-700 whitespace-nowrap"
+            >
               <Label>Item No.</Label>
             </th>
-            <th rowSpan={2} className="text-left p-3 text-gray-700">
+            <th
+              rowSpan={2}
+              className="text-left p-3 text-gray-700 whitespace-nowrap"
+            >
               <Label>Item Description</Label>
             </th>
-            <th rowSpan={2} className="text-left p-3 text-gray-700">
+            <th
+              rowSpan={2}
+              className="text-left p-3 text-gray-700 whitespace-nowrap"
+            >
               <Label>Lot No.</Label>
             </th>
             <th rowSpan={2} className="text-left p-3 text-gray-700">

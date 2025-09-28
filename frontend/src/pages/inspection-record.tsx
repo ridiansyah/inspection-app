@@ -88,16 +88,16 @@ const InspectionRecord: React.FC = () => {
             forReviewCount={forReviewCount}
           />
         </div>
-        <div className="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
-          <div className="flex items-center space-x-4">
+        <div className="px-6 py-4 border-b border-gray-200 flex max-sm:flex-col gap-2 items-center justify-between">
+          <div className="flex items-center">
             <SearchBox
               value={filters.search}
               onChange={(value) => dispatch(setSearchFilter(value))}
               placeholder="Search inspections..."
-              className="w-64"
+              className="max-w-88"
             />
           </div>
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center gap-2">
             <ExportButton
               data={filteredRecords}
               filename="inspection-records"

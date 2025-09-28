@@ -99,7 +99,7 @@ const InspectionCreate: React.FC = () => {
       ///
       order: [defaultOrder],
     },
-    mode: "onBlur",
+    mode: "all",
   });
 
   const {
@@ -439,128 +439,129 @@ const InspectionCreate: React.FC = () => {
           <div className="border-b border-gray-200 bg-white pb-4">
             <div className="text-md font-semibold">Order Information</div>
 
-            <div className="rounded-xl border border-gray-200 mt-4">
-              {orderFields.map((field, idx) => {
-                const optionsFillItems = optionsItems
-                  ? optionsItems
-                      .filter((item) => {
-                        const val = Number(item.value);
-                        return (
-                          !usedIds.includes(val) ||
-                          val === watch(`order.${idx}.item._id`)
-                        );
-                      })
-                      .map((obj) => ({
-                        value: String(obj.value),
-                        label: obj.label,
-                      }))
-                  : [];
-                return (
-                  <Fragment key={field.id}>
-                    <div
-                      className={classNames(
-                        "grid grid-cols-12 gap-2 items-center px-4 py-2 bg-gray-100 text-xs text-gray-500 ",
-                        idx === 0
-                          ? "rounded-t-xl"
-                          : "border-t border-t-gray-200"
-                      )}
-                    >
-                      <div className="col-span-7">
-                        <Label>Item Description</Label>
-                      </div>
-                      <div className="col-span-5">
-                        <Label>Qty</Label>
-                      </div>
-                    </div>
-                    <div className="px-4 py-3 border-t border-t-gray-200">
-                      <div className="grid grid-cols-12 gap-3">
-                        <div className="col-span-7">
-                          <Controller
-                            control={control}
-                            name={`order.${idx}.item._id` as const}
-                            render={({ field }) => (
-                              <Select
-                                options={optionsFillItems}
-                                placeholder="Select an item"
-                                searchPlaceholder="Search Item..."
-                                value={String(field.value)}
-                                onChange={(value) => {
-                                  const tempItem = items.find(
-                                    (find) => String(find._id) === String(value)
-                                  );
-                                  field.onChange(Number(value));
-                                  setValue(
-                                    `order.${idx}.item.no`,
-                                    tempItem?.no ?? ""
-                                  );
-                                  setValue(
-                                    `order.${idx}.item.name`,
-                                    tempItem?.name ?? ""
-                                  );
-                                  setValue(
-                                    `order.${idx}.item.desc`,
-                                    tempItem?.desc ?? ""
-                                  );
-                                  setValue(`order.${idx}.lots`, [
-                                    {
-                                      no: "",
-                                      selection: { _id: 0, name: "" },
-                                      allocation: { _id: 0, name: "" },
-                                      owner: { _id: 0, name: "" },
-                                      condition: { _id: 0, name: "" },
-                                      avail_qty: 0,
-                                      qty_req: 0,
-                                      insp_req: false,
-                                    },
-                                  ]);
-                                }}
-                                error={errors.order?.[idx]?.item?._id}
-                              />
-                            )}
-                          />
-                        </div>
-                        <div className="col-span-5 flex items-center gap-2">
-                          <Controller
-                            control={control}
-                            name={`order.${idx}.qty` as const}
-                            render={({ field }) => (
-                              <Input
-                                field={field}
-                                error={errors?.order?.[idx]?.qty}
-                                type="number"
-                                placeHolder="Enter Qty"
-                                className="flex-1"
-                              />
-                            )}
-                          />
-                          <Button
-                            variant="secondary"
-                            className="w-36"
-                            disabled={orderFields.length === 1}
-                            onClick={() => removeOrder(idx)}
-                          >
-                            Delete Item
-                          </Button>
-                          {/* <button
-                          type="button"
-                          onClick={() => removeOrder(idx)}
-                          className="rounded-lg border px-3 h-9 w-36"
+            <div className="overflow-x-auto rounded-xl border border-gray-200 mt-4">
+              <table className="w-full">
+                <tbody>
+                  {orderFields.map((field, idx) => {
+                    const optionsFillItems = optionsItems
+                      ? optionsItems
+                          .filter((item) => {
+                            const val = Number(item.value);
+                            return (
+                              !usedIds.includes(val) ||
+                              val === watch(`order.${idx}.item._id`)
+                            );
+                          })
+                          .map((obj) => ({
+                            value: String(obj.value),
+                            label: obj.label,
+                          }))
+                      : [];
+                    return (
+                      <Fragment key={field.id}>
+                        <tr
+                          className={classNames(
+                            "bg-gray-100",
+                            idx === 0
+                              ? "rounded-t-xl"
+                              : "border-t border-t-gray-200"
+                          )}
                         >
-                          Delete Item
-                        </button> */}
-                        </div>
-
-                        {/* Lots table */}
-
+                          <td
+                            className="text-left text-gray-700 p-3"
+                            colSpan={4}
+                          >
+                            <Label>Item Description</Label>
+                          </td>
+                          <td
+                            className="text-left text-gray-700 p-3"
+                            colSpan={4}
+                          >
+                            <Label>Qty</Label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="p-3" colSpan={4}>
+                            <Controller
+                              control={control}
+                              name={`order.${idx}.item._id` as const}
+                              render={({ field }) => (
+                                <Select
+                                  options={optionsFillItems}
+                                  placeholder="Select an item"
+                                  searchPlaceholder="Search Item..."
+                                  value={String(field.value)}
+                                  onChange={(value) => {
+                                    const tempItem = items.find(
+                                      (find) =>
+                                        String(find._id) === String(value)
+                                    );
+                                    field.onChange(Number(value));
+                                    setValue(
+                                      `order.${idx}.item.no`,
+                                      tempItem?.no ?? ""
+                                    );
+                                    setValue(
+                                      `order.${idx}.item.name`,
+                                      tempItem?.name ?? ""
+                                    );
+                                    setValue(
+                                      `order.${idx}.item.desc`,
+                                      tempItem?.desc ?? ""
+                                    );
+                                    setValue(`order.${idx}.lots`, [
+                                      {
+                                        no: "",
+                                        selection: { _id: 0, name: "" },
+                                        allocation: { _id: 0, name: "" },
+                                        owner: { _id: 0, name: "" },
+                                        condition: { _id: 0, name: "" },
+                                        avail_qty: 0,
+                                        qty_req: 0,
+                                        insp_req: false,
+                                      },
+                                    ]);
+                                  }}
+                                  error={errors.order?.[idx]?.item?._id}
+                                />
+                              )}
+                            />
+                          </td>
+                          <td className="p-3" colSpan={3}>
+                            <Controller
+                              control={control}
+                              name={`order.${idx}.qty` as const}
+                              render={({ field }) => (
+                                <Input
+                                  field={field}
+                                  error={errors?.order?.[idx]?.qty}
+                                  type="number"
+                                  placeHolder="Enter Qty"
+                                  className="flex-1"
+                                />
+                              )}
+                            />
+                          </td>
+                          <td className="p-3">
+                            <Button
+                              variant="secondary"
+                              className="w-36"
+                              disabled={orderFields.length === 1}
+                              onClick={() => removeOrder(idx)}
+                            >
+                              Delete Item
+                            </Button>
+                          </td>
+                        </tr>
                         <FormProvider {...methods}>
                           <LotsSection idx={idx} errors={errors} />
                         </FormProvider>
-                      </div>
-                    </div>
-                  </Fragment>
-                );
-              })}
-              <div className="p-4">
+                      </Fragment>
+                    );
+                  })}
+                </tbody>
+              </table>
+              <div className="p-4 border-t border-t-gray-200">
                 <Button
                   variant="outline"
                   onClick={() => appendOrder(defaultOrder)}
@@ -588,7 +589,7 @@ const InspectionCreate: React.FC = () => {
               )}
             />
           </div>
-          <div className="flex gap-2 ">
+          <div className="flex gap-2 max-sm:flex-col ">
             <Button
               variant="secondary"
               size="lg"
@@ -597,7 +598,7 @@ const InspectionCreate: React.FC = () => {
               Cancel
             </Button>
             <Button
-              className="ml-auto"
+              className="sm:ml-auto"
               variant="outline"
               size="lg"
               onClick={() => {}}

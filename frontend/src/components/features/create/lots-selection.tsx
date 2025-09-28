@@ -17,6 +17,7 @@ import {
   getAvailableQty,
 } from "../../../utils/lots-data";
 import Input from "../../inputs/input";
+import { CopyPlus, Trash2 } from "lucide-react";
 
 const LotsSection: React.FC<{
   idx: number;
@@ -100,34 +101,36 @@ const LotsSection: React.FC<{
 
         return (
           <Fragment key={f.id}>
-            <div className="col-span-12 grid grid-cols-12 gap-0 items-end">
-              <div className="col-span-3 leading-none">
+            <tr>
+              <td className="px-3 whitespace-nowrap">
                 <span className="text-xs font-semibold">Lot Selection</span>
-              </div>
-              <div className="col-span-2 leading-none">
+              </td>
+              <td className="px-3 whitespace-nowrap">
                 <span className="text-xs font-semibold">Allocation</span>
-              </div>
-              <div className="col-span-2 leading-none">
+              </td>
+              <td className="px-3 whitespace-nowrap">
                 <span className="text-xs font-semibold">Owner</span>
-              </div>
-              <div className="col-span-2 leading-none">
+              </td>
+              <td className="px-3 whitespace-nowrap">
                 <span className="text-xs font-semibold">Condition</span>
-              </div>
-              <div className="col-span-1 leading-none">
+              </td>
+              <td className="px-3 whitespace-nowrap">
                 <span className="text-xs font-semibold">Avail. Qty</span>
-              </div>
-              <div className="col-span-1 leading-none">
+              </td>
+              <td className="px-3 whitespace-nowrap">
                 <span className="text-xs font-semibold">Qty Required</span>
-              </div>
-              <div className="col-span-1 leading-none">
+              </td>
+              <td className="px-3 whitespace-nowrap">
                 <span className="text-xs font-semibold">
                   Inspection Required
                 </span>
-              </div>
-              <div className="col-span-0 md:col-span-0"></div>
-            </div>
-            <div className="col-span-12 grid grid-cols-12 gap-3 items-center">
-              <div className="col-span-3">
+              </td>
+              <td className="px-3 whitespace-nowrap">
+                <span className="text-xs font-semibold"></span>
+              </td>
+            </tr>
+            <tr>
+              <td className="px-3 whitespace-nowrap pb-3">
                 <Controller
                   control={control}
                   name={`order.${idx}.lots.${rIdx}.selection._id` as const}
@@ -159,8 +162,8 @@ const LotsSection: React.FC<{
                     />
                   )}
                 />
-              </div>
-              <div className="col-span-2">
+              </td>
+              <td className="px-3 whitespace-nowrap pb-3">
                 <Controller
                   control={control}
                   name={`order.${idx}.lots.${rIdx}.allocation._id` as const}
@@ -190,8 +193,8 @@ const LotsSection: React.FC<{
                     />
                   )}
                 />
-              </div>
-              <div className="col-span-2">
+              </td>
+              <td className="px-3 whitespace-nowrap pb-3">
                 <Controller
                   control={control}
                   name={`order.${idx}.lots.${rIdx}.owner._id` as const}
@@ -219,8 +222,8 @@ const LotsSection: React.FC<{
                     />
                   )}
                 />
-              </div>
-              <div className="col-span-2">
+              </td>
+              <td className="px-3 whitespace-nowrap pb-3">
                 <Controller
                   control={control}
                   name={`order.${idx}.lots.${rIdx}.condition._id` as const}
@@ -248,8 +251,8 @@ const LotsSection: React.FC<{
                     />
                   )}
                 />
-              </div>
-              <div className="col-span-1">
+              </td>
+              <td className="px-3 whitespace-nowrap pb-3">
                 <Controller
                   control={control}
                   name={`order.${idx}.lots.${rIdx}.avail_qty` as const}
@@ -257,15 +260,15 @@ const LotsSection: React.FC<{
                     <Input type="number" field={field} disabled />
                   )}
                 />
-              </div>
-              <div className="col-span-1">
+              </td>
+              <td className="px-3 whitespace-nowrap pb-3">
                 <Controller
                   control={control}
                   name={`order.${idx}.lots.${rIdx}.qty_req` as const}
                   render={({ field }) => <Input type="number" field={field} />}
                 />
-              </div>
-              <div className="col-span-1 flex items-center justify-center">
+              </td>
+              <td className="px-3 whitespace-nowrap items-center">
                 <Controller
                   control={control}
                   name={`order.${idx}.lots.${rIdx}.insp_req` as const}
@@ -278,9 +281,11 @@ const LotsSection: React.FC<{
                     />
                   )}
                 />
-              </div>
-              <div className="col-span-12 md:col-span-12 flex gap-2 justify-end">
+              </td>
+              <td className="px-3 whitespace-nowrap flex gap-2">
                 <Button
+                  className="flex-1"
+                  size="sm"
                   variant="outline"
                   onClick={() =>
                     append({
@@ -295,17 +300,19 @@ const LotsSection: React.FC<{
                     })
                   }
                 >
-                  + Add Lot
+                  <CopyPlus size={24} />
                 </Button>
                 <Button
                   variant="secondary"
+                  size="sm"
+                  className="flex-1"
                   disabled={fields.length === 1}
                   onClick={() => remove(rIdx)}
                 >
-                  Delete Lot
+                  <Trash2 size={24} color="oklch(63.7% 0.237 25.331)" />
                 </Button>
-              </div>
-            </div>
+              </td>
+            </tr>
           </Fragment>
         );
       })}
